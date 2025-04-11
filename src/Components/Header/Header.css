@@ -1,0 +1,88 @@
+.header{
+    display: flex;
+    gap: 10px;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    height: 89px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* overflow: hidden; */
+    z-index: 90;
+    transition: all,.5s ease-in-out;
+    transition-duration: 1.2s;
+}.header::before{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.788);
+    backdrop-filter: saturate(180%) blur(5px);
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    /* box-shadow: inset 0 -1px 0 0 grey; */
+   
+}
+.header >div:nth-child(3){
+display: flex;
+align-items: center;
+gap: 20px;
+}.header >div:nth-child(3)>div:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    display: none;
+    font-family: var(--font-grotesk);
+}.header >div:nth-child(3) span{
+    font-size: 23px;
+}.header >div:nth-child(3)>div:nth-child(2)>span{
+    cursor: pointer;
+}
+.over-lay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.432);
+    filter: blur(300px);
+    cursor: pointer;
+    z-index: 95;
+    transform: translate3d(0,0,0);
+  
+    transition: all,.5s ease-in-out;
+}.show{
+    transform: translate3d(500vh,0,0); 
+
+}@media (min-width:995px){
+    .over-lay{
+        display: none;
+    }
+}
+@media (min-width:650px) {
+    .header >div:nth-child(3)>div:nth-child(1){
+        display: flex;
+    }
+}@media (min-width:995px) {
+    .header >div:nth-child(3)>div:nth-child(2){
+        display: none;
+    }.header::before{
+        background-color: transparent;
+        filter: blur(4px) saturate(150%);
+        backdrop-filter: none;
+        box-shadow: none;   
+    }.header{
+        position: relative;
+        box-shadow: none;
+    }.header.scrolled{
+        position: sticky;
+        background-color: rgba(255, 255, 255, 0.788);
+        backdrop-filter: saturate(180%) blur(5px);
+    } .header >div:nth-child(3)>div:nth-child(1){
+        color: white;
+    }   .header.scrolled>div:nth-child(3)>div:nth-child(1){
+        color: black;
+    }
+}

@@ -1,0 +1,21 @@
+.logo{
+    /* background-color: green; */
+    padding:10px;
+    transition: all,.5s ease-in-out;
+}
+.logoImgBlack{
+    display: flex;
+}.logoImgWhite{
+    display: none;
+}
+@media (min-width:995px) {
+    .header.scrolled .logoImgBlack{
+        display: flex;
+    }.header.scrolled .logoImgWhite{
+        display: none;
+    } .logoImgWhite{
+        display: flex;
+    }.logoImgBlack{
+        display: none;
+    }
+}

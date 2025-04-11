@@ -1,0 +1,52 @@
+.platformLearn{
+    position: relative;
+    padding-block: 60px 70px;
+    font-family: var(--font-grotesk);
+}
+.platformLearn>div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-block: 30px;
+    font-size: 32px;
+    color: #2b3734;
+    font-weight: 900;
+    z-index: 3;
+}.platformLearn>div:nth-child(2){
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    align-items: center;
+    overflow-x: hidden;
+    z-index: -2;
+    white-space: nowrap;
+    opacity: .1;
+    right: 0;
+}.platformLearn>div:nth-child(2)>h1{
+    font-size: 140px;
+    white-space: nowrap;
+    position: relative;
+    animation: move-text 35s linear infinite;
+}
+
+
+
+
+@keyframes move-text {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+@media (min-width:998px) {
+    .platformLearn>div:nth-child(1){
+        font-size: 39px;
+    }
+}
