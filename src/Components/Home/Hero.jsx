@@ -39,15 +39,6 @@ function Hero() {
             duration:1,
             } ,"-=2.3")
             
-    //    gsap.to("animate8",{
-    //     scrollTrigger:{
-    //         trigger:heroRef.current,
-    //         markers:true,
-    //         start:"18% 20%",
-    //         end:"bottom 40%",
-    //         scrub:true
-    //     },x:200
-    //    })
 
     });
   return (
