@@ -41,6 +41,7 @@ function Hero() {
             
 
     });
+    console.log('hello')
   return (
     <div className='hero'
     container="universal"
